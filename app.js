@@ -12,7 +12,7 @@ class CodeWaterfall {
   constructor(canvas) {
     this.canvas = canvas;
     this.ctx = canvas.getContext("2d", { alpha: true });
-    this.glyphs = Array.from("01LOVEYOU∞♥{}[]();+=<>アイラブユ");
+    this.glyphs = Array.from("LOVE♥LOVE♥♥");
     this.mode = "intro";
     this.pulseUntil = 0;
     this.lastFrame = 0;
@@ -196,3 +196,4 @@ $("#closeTip").addEventListener("click", () => {
 });
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js").catch(() => {});
 matrixRain = new CodeWaterfall($("#codeRain"));
+
