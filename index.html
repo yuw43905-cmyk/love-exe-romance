@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#080610">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Love.exe">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:title" content="Love.exe · 程序员的浪漫">
+  <meta property="og:description" content="在所有可能的世界里，我都选择与你相遇。">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./app.css">
+  <link rel="stylesheet" href="./matrix.css">
+  <title>Love.exe · 程序员的浪漫</title>
+  <meta name="description" content="把喜欢写进每一次心跳，把余生编译成永远。">
+</head>
+<body>
+  <main class="app" id="app">
+    <div class="grid" aria-hidden="true"></div>
+    <div class="glow" aria-hidden="true"></div>
+    <canvas class="code-rain" id="codeRain" aria-hidden="true"></canvas>
+    <div class="rain-vignette" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="status"><i></i><span>LOVE.EXE</span><em>ONLINE</em></div>
+      <button class="sound-toggle" id="soundToggle" type="button" aria-label="切换声音" aria-pressed="true">♪</button>
+    </header>
+
+    <section class="scene intro is-active" id="intro" aria-labelledby="mainTitle">
+      <p class="kicker">// A STORY WRITTEN IN CODE</p>
+      <button class="heart-stage" id="heartButton" type="button" aria-label="触碰爱心">
+        <span class="orbit orbit-a"></span><span class="orbit orbit-b"></span>
+        <span class="pixel-heart"><i></i></span>
+        <span class="tap-hint">轻触心跳</span>
+      </button>
+      <h1 id="mainTitle">在所有可能的世界里<br>我都选择<span>与你相遇</span></h1>
+      <p class="subtitle">You are the only constant in my universe.</p>
+      <button class="run-button" id="runButton" type="button"><span>运行我们的故事</span><kbd>⌘ ↵</kbd></button>
+    </section>
+
+    <section class="scene story" id="story" aria-live="polite" aria-label="我们的故事">
+      <div class="terminal">
+        <div class="terminal-bar"><span></span><span></span><span></span><b>our_story.js</b></div>
+        <div class="terminal-body" id="terminalBody">
+          <p data-step="0"><i>01</i><code><b>const</b> universe = <strong>∞</strong>;</code></p>
+          <p data-step="1"><i>02</i><code><b>const</b> you = universe.<u>find</u>(<span>"唯一"</span>);</code></p>
+          <p data-step="2"><i>03</i><code><b>if</b> (you) &#123; myWorld.<u>lightUp</u>(); &#125;</code></p>
+          <p data-step="3"><i>04</i><code><b>while</b> (life.<u>isRunning</u>) &#123;</code></p>
+          <p data-step="4"><i>05</i><code>&nbsp;&nbsp;love.you++;</code></p>
+          <p data-step="5"><i>06</i><code>&#125;</code></p>
+        </div>
+      </div>
+      <div class="commit-card" id="commitCard">
+        <p class="commit-hash">commit <span>forever</span></p>
+        <h2>“余生的每一次更新<br>都想与你一起。”</h2>
+        <div class="signature"><span>♥</span><p>compiled with love<br><b>no bugs, just us.</b></p></div>
+      </div>
+      <div class="story-actions" id="storyActions">
+        <button id="replayButton" type="button">↻ 再运行一次</button>
+        <button class="share-button" id="shareButton" type="button">分享这份浪漫</button>
+      </div>
+    </section>
+
+    <footer><span>01</span><code>while (life.isRunning) &#123; love.you++; &#125;</code><i></i></footer>
+    <div class="particle-layer" id="particleLayer" aria-hidden="true"></div>
+    <div class="install-tip" id="installTip"><button id="closeTip" aria-label="关闭提示">×</button><b>把浪漫装进 iPhone</b><span>点 Safari 的“分享” → “添加到主屏幕”</span></div>
+  </main>
+  <script src="./app.js" defer></script>
+</body>
+</html>
+
