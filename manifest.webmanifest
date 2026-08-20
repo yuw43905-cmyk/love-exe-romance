@@ -1,0 +1,12 @@
+{
+  "name": "Love.exe · 程序员的浪漫",
+  "short_name": "Love.exe",
+  "description": "把喜欢写进每一次心跳，把余生编译成永远。",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#080610",
+  "theme_color": "#080610"
+}
