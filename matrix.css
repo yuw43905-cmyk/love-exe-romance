@@ -50,6 +50,31 @@
 
 .scene { z-index: 2; }
 
+/* A single typographic heart reads cleanly at every iPhone size. */
+.pixel-heart {
+  width: 112px;
+  height: 96px;
+  display: grid;
+  place-items: center;
+  rotate: 0deg;
+  border-radius: 0;
+  background: linear-gradient(145deg, #ff9bbb 8%, #ff4f86 48%, #f32664 92%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #ff4f86;
+  font: 112px/.82 Georgia, "Times New Roman", serif;
+  box-shadow: none;
+  filter:
+    drop-shadow(0 0 10px rgba(255, 121, 165, .8))
+    drop-shadow(0 0 30px rgba(255, 44, 109, .56));
+}
+
+.pixel-heart::before,
+.pixel-heart::after { content: none; }
+
+.pixel-heart i { display: none; }
+
 h1 { text-shadow: 0 3px 24px #03040c, 0 0 2px #03040c; }
 
 .terminal {
