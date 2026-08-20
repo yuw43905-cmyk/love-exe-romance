@@ -1,0 +1,66 @@
+/* Full-screen blue-cyan code waterfall, layered behind the romantic UI. */
+.grid {
+  z-index: 0;
+  opacity: .08;
+  background-image:
+    linear-gradient(rgba(78, 211, 255, .07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(78, 211, 255, .07) 1px, transparent 1px);
+}
+
+.grid::after {
+  opacity: .42;
+  background-image: radial-gradient(circle, #8bdcff 0 1px, transparent 1.2px);
+}
+
+.glow { z-index: 1; background: rgba(255, 48, 117, .13); }
+.app.story-mode .glow { background: rgba(65, 158, 220, .17); }
+
+.code-rain {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: .94;
+  pointer-events: none;
+  filter: drop-shadow(0 0 4px rgba(42, 210, 255, .4));
+  transition: filter 1s ease, opacity 1s ease;
+}
+
+.app.story-mode .code-rain {
+  filter: drop-shadow(0 0 6px rgba(56, 218, 255, .64));
+  opacity: 1;
+}
+
+.rain-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 44%, rgba(4, 5, 17, .08) 0 18%, rgba(4, 5, 17, .28) 58%, rgba(2, 3, 10, .62) 100%),
+    linear-gradient(180deg, rgba(3, 4, 13, .1), transparent 18%, transparent 80%, rgba(3, 4, 13, .5));
+  box-shadow: inset 0 0 90px rgba(0, 0, 0, .58);
+}
+
+.kicker {
+  color: #9fdff4;
+  text-shadow: 0 0 10px rgba(77, 215, 255, .58);
+}
+
+.scene { z-index: 2; }
+
+h1 { text-shadow: 0 3px 24px #03040c, 0 0 2px #03040c; }
+
+.terminal {
+  border-color: rgba(96, 215, 255, .18);
+  background: rgba(5, 8, 19, .82);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, .48),
+    inset 0 1px rgba(132, 224, 255, .08),
+    0 0 35px rgba(35, 163, 220, .09);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .code-rain { opacity: .58; }
+}
